@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="x-icon" href="cloud.png" style="border-radius: 25%">
-    <title>Weather App</title>
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="weather.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
@@ -26,9 +29,9 @@
         <div class="weather-container">
 
             <!-- grant location container-->
-            <div class="sub-container grant-location-container">
-                <img src="location.png" width="80" height="80" loading="lazy">
-                <p>Grant Location Access</p>
+            <div class=" sc grant-location-container">
+                <img src="/location.png" width="80" height="80" loading="lazy">
+                <p>grant Location Access</p>
                 <p>Allow Access to get weather Information</p>
                 <button class="btn" data-grantAccess>Grant Access</button>
             </div>
@@ -37,29 +40,34 @@
             <form class="form-container" data-searchForm>
                 <input placeholder="Search for City..." data-searchInput>
                 <button class="btn" type="submit">
-                    <img src="search.png"  width="20" height="20" loading="lazy">
+                    <img src="/search.png"  width="20" height="20" loading="lazy">
                 </button>
             </form>
 
             <!--- loading screen container -->
-            <div class="sub-container loading-container">
-                <img src="loading.gif" width="150" height="150">
+            <div class="sc loading-container">
+                <img src="/loading.gif" width="150" height="150">
                 <p>Loading</p>
             </div>
 
+            <div class=" sc error-container">
+                <img src="/not-found.png" width="150" height="150">
+                <p class="demo"></p>
+            </div>
+
             <!-- show weather info -->
-            <div class="sub-container user-info-container">
+            <div class="sc user-info-container">
 
                 <!--city name and Flag-->
                 <div class="name">
                     <p data-cityName></p>
-                    <img data-countryIcon>
+                    <img data-countryIcon class="flag">
                 </div>
 
                 <!-- weather descriptuion-->
                 <p data-weatherDesc></p>
                 <!--weather Icon-->
-                <img data-weatherIcon>
+                <img data-weatherIcon class="icon">
                 <!--temperature-->
                 <p data-temp></p>
 
@@ -68,21 +76,21 @@
 
                     <!--card 1-->
                     <div class="parameter">
-                        <img src="wind.png" >
+                        <img src="/wind.png" >
                         <p>windspeed</p>
                         <p data-windspeed></p>
                     </div>
 
                     <!--card 2-->
                     <div class="parameter">
-                        <img src="humidity.png" >
+                        <img src="/humidity.png" >
                         <p>humidity</p>
                         <p data-humidity></p>
                     </div>
 
                     <!--card 3-->
                     <div class="parameter">
-                        <img src="cloud.png" >
+                        <img src="/cloud.png" >
                         <p>Clouds</p>
                         <p data-cloudiness></p>
                     </div>
